@@ -9,11 +9,19 @@ public class OpenTips : MonoBehaviour
 
     private void Start()
     {
+
+
     }
 
     public void OnClickButton()
     {
         openTips.SetActive(true);
-        TipsManeger.Instance.targetBuotton = targetBuotton;
+        TipsManeger.Instance.targetLabel = gameObject.GetComponentInChildren<UILabel>();
+        TipsManeger.Instance.DestroyEvent += DestroyOnClick;
+     }
+    public void DestroyOnClick()
+    {
+        gameObject.SetActive(false);
     }
+
 }

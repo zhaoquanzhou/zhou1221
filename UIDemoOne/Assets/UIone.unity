@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -113,48 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &6515423
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 6515425}
-  - component: {fileID: 6515424}
-  m_Layer: 0
-  m_Name: OpenTips
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &6515424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 6515423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f16609124211be74c935830682dd7f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openTips: {fileID: 915990478}
-  targetBuotton: {fileID: 0}
---- !u!4 &6515425
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 6515423}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.41174334, y: -0.08655846, z: -0.018431084}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &21801885
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +575,7 @@ GameObject:
   - component: {fileID: 714817674}
   - component: {fileID: 714817673}
   - component: {fileID: 714817672}
+  - component: {fileID: 714817675}
   m_Layer: 5
   m_Name: WeaponButton
   m_TagString: Untagged
@@ -631,7 +590,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 714817670}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -743, y: 358, z: 0}
+  m_LocalPosition: {x: -467, y: 187, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1411268638}
@@ -663,7 +622,7 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick:
-  - mTarget: {fileID: 6515424}
+  - mTarget: {fileID: 714817675}
     mMethodName: OnClickButton
     mParameters: []
     oneShot: 0
@@ -729,6 +688,19 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
   mSpriteName: Window
   mFillCenter: 1
+--- !u!114 &714817675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 714817670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16609124211be74c935830682dd7f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openTips: {fileID: 915990478}
+  targetBuotton: {fileID: 0}
 --- !u!1 &915990478
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +795,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eaea3ead02b65c40a21353da5a316cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetBuotton: {fileID: 0}
   targetLabel: {fileID: 0}
 --- !u!1 &1370334080
 GameObject:
@@ -1146,7 +1117,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 915990481}
+    mMethodName: OnClickCancel
+    mParameters: []
+    oneShot: 0
 --- !u!65 &1570738957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1220,6 +1195,7 @@ GameObject:
   - component: {fileID: 1605642749}
   - component: {fileID: 1605642748}
   - component: {fileID: 1605642747}
+  - component: {fileID: 1605642750}
   m_Layer: 5
   m_Name: PantButton
   m_TagString: Untagged
@@ -1234,7 +1210,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1605642745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -743, y: 90, z: 0}
+  m_LocalPosition: {x: -466, y: -45, z: 0}
   m_LocalScale: {x: 0.999, y: 0.999, z: 0.999}
   m_Children:
   - {fileID: 1370334081}
@@ -1266,7 +1242,7 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick:
-  - mTarget: {fileID: 6515424}
+  - mTarget: {fileID: 1605642750}
     mMethodName: OnClickButton
     mParameters: []
     oneShot: 0
@@ -1332,6 +1308,19 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
   mSpriteName: Window
   mFillCenter: 1
+--- !u!114 &1605642750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1605642745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16609124211be74c935830682dd7f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openTips: {fileID: 915990478}
+  targetBuotton: {fileID: 0}
 --- !u!1 &1733272290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1427,7 @@ Transform:
   m_GameObject: {fileID: 1733272290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0018518518, y: 0.0018518518, z: 0.0018518518}
+  m_LocalScale: {x: 0.0038910506, y: 0.0038910506, z: 0.0038910506}
   m_Children:
   - {fileID: 661916103}
   - {fileID: 1441584761}
@@ -1457,6 +1446,7 @@ GameObject:
   - component: {fileID: 1754484528}
   - component: {fileID: 1754484527}
   - component: {fileID: 1754484526}
+  - component: {fileID: 1754484529}
   m_Layer: 5
   m_Name: ClotheButton
   m_TagString: Untagged
@@ -1471,7 +1461,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1754484524}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -743, y: 231.3, z: 0}
+  m_LocalPosition: {x: -467, y: 78, z: 0}
   m_LocalScale: {x: 0.999, y: 0.999, z: 0.999}
   m_Children:
   - {fileID: 1926347559}
@@ -1503,7 +1493,7 @@ MonoBehaviour:
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
   onClick:
-  - mTarget: {fileID: 6515424}
+  - mTarget: {fileID: 1754484529}
     mMethodName: OnClickButton
     mParameters: []
     oneShot: 0
@@ -1569,6 +1559,19 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: 62adb30369acbf943a67cee0f69267a3, type: 2}
   mSpriteName: Window
   mFillCenter: 1
+--- !u!114 &1754484529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1754484524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f16609124211be74c935830682dd7f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openTips: {fileID: 915990478}
+  targetBuotton: {fileID: 0}
 --- !u!1 &1848231051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,7 +1628,11 @@ MonoBehaviour:
   pressedSprite2D: {fileID: 0}
   disabledSprite2D: {fileID: 0}
   pixelSnap: 0
-  onClick: []
+  onClick:
+  - mTarget: {fileID: 915990481}
+    mMethodName: DestroyButton
+    mParameters: []
+    oneShot: 0
 --- !u!65 &1848231054
 BoxCollider:
   m_ObjectHideFlags: 0

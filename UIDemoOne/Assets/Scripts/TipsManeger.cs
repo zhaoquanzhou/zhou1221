@@ -28,16 +28,14 @@ public class TipsManeger : MonoBehaviour
     #endregion 单例模式
 
     public delegate void DestroyGameobject();
-
-    public GameObject targetBuotton;
-
+    public event DestroyGameobject DestroyEvent;
     public UILabel targetLabel;
     private UILabel label;
+
 
     private void Start()
     {
         label = gameObject.GetComponentInChildren<UILabel>();
-        targetLabel = targetLabel.GetComponentInChildren<UILabel>();
     }
 
     private void Update()
@@ -45,13 +43,14 @@ public class TipsManeger : MonoBehaviour
         label.text = targetLabel.text;
     }
 
-    public void OnClickSure()
+    public void DestroyButton()
     {
-        targetBuotton.SetActive(false);
+        DestroyEvent();
     }
 
     public void OnClickCancel()
     {
         gameObject.SetActive(false);
     }
+
 }
