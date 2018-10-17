@@ -25,7 +25,12 @@ namespace 反射
 
         public void Attck()
         {
-            Console.WriteLine("你被攻击了");
+            Console.WriteLine("{0}攻击了玩家,攻击力为:{1}", nameManster, atckManster);
+        }
+
+        public void Attck(int atckManster)
+        {
+            Console.WriteLine("{0}攻击伤害为{1}", nameManster, atckManster);
         }
     }
 }
