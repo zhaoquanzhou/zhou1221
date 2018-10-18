@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class UIGridMenster : MonoBehaviour
 {
-
     public GameObject grid;
-    GameObject[] cell;
-    GameObject eauip;
-    GameObject targetCell;
-    void Start()
+    private GameObject[] cell;
+    private GameObject eauip;
+    private GameObject targetCell;
+
+    private void Start()
     {
         cell = GameObject.FindGameObjectsWithTag("Cell");
         eauip = Resources.Load<GameObject>("Equip");
-
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -22,17 +22,20 @@ public class UIGridMenster : MonoBehaviour
             OnClicKCell();
         }
     }
+
     public void OnClicKCell()
     {
-        for (int i = 0; i < cell.Length; i++)
+        int index = Random.Range(0, cell.Length);
+        if (cell[index].transform.childCount != 0)
         {
-
-            if (!cell[i].transform.CompareTag("Equip"))
-            {
-                eauip.transform.SetParent(cell[i].transform);
-
-                Instantiate(eauip,cell[i].transform);
-            }
+            index = Random.Range(0, cell.Length);
+        }
+        if (cell[index].transform.childCount == 0)
+        {
+            Instantiate(eauip, cell[index].transform);
+            eauip.transform.SetParent(cell[index].transform);
+            eauip.transform.localPosition = Vector3.zero;//归零坐标
+            eauip.transform.localScale = Vector3.one;
         }
     }
 }

@@ -15,10 +15,10 @@ namespace Bug特性作业
         public string bugDetails;
         public GameBugAttribute(string _correctTime, string _correctPerson, string _correctRecord, string _bugDetails)
         {
-            this.correctTime = _correctTime;
-            this.correctPerson = _correctPerson;
-            this.correctRecord = _correctRecord;
-            this.bugDetails = _bugDetails;
+            this.correctTime = "修改时间:" + _correctTime;
+            this.correctPerson = "修改人:" + _correctPerson;
+            this.correctRecord = "修改记录:" + _correctRecord;
+            this.bugDetails = "Bug具体细节:" + _bugDetails;
         }
     }
 }
