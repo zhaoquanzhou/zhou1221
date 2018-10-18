@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyBook>
+  <Book>
+    <Name>高等数学</Name>
+    <Price>35</Price>
+    <Count>1</Count>
+  </Book>
+</MyBook>
