@@ -10,12 +10,12 @@ public class BulletShoot : MonoBehaviour
 
     private void Start()
     {
-        bulletPredab = Resources.Load<GameObject>("Effect");
+        bulletPredab = Resources.Load<GameObject>("Bullet");
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             CreateBullet();
         }

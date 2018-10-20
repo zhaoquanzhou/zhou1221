@@ -6,9 +6,9 @@ public class PlayerData
 {
     #region 单例模式
 
-    private PlayerData instence;
+    private static PlayerData instence;
 
-    public PlayerData Instence
+    public static PlayerData Instence
     {
         get
         {
@@ -22,14 +22,11 @@ public class PlayerData
 
     #endregion 单例模式
 
-    public PlayerData()
-    {
-    }
-
     public string name;
     public int hp;
     public int mp;
     public int defense;
     public int atk;
-    public List<Item> equip;
+    public List<int> equipData = new List<int>();
+    public Dictionary<Transform, int> bagData = new Dictionary<Transform, int>();
 }

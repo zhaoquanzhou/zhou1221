@@ -24,23 +24,23 @@ public class GameData
     #endregion 单例模式
 
     public string jsonFlie;
-    public AllEquip allEquip;
+    public AllEquip allEquip = new AllEquip();
 
     public GameData()
     {
         jsonFlie = File.ReadAllText(Application.dataPath + @"\Resources\Equipment.json");
-        AllEquip allEquip = JsonUtility.FromJson<AllEquip>(jsonFlie);
-        foreach (var item in allEquip.items)
-        {
-            Debug.Log(item.name);
-        }
+        allEquip = JsonUtility.FromJson<AllEquip>(jsonFlie);
+        //foreach (var item in allEquip.items)
+        //{
+        //    //Debug.Log(item.name);
+        //}
     }
 }
 
 [System.Serializable]
 public class AllEquip
 {
-    public Item[] items;
+    public List<Item> items = new List<Item>();
 }
 
 [System.Serializable]
