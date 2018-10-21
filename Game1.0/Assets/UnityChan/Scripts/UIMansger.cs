@@ -116,7 +116,7 @@ public class UIMansger : MonoBehaviour
         }
         else
         {
-            ReadData();//
+            ReadData();//读取背包数据
         }
     }
 
@@ -210,8 +210,7 @@ public class UIMansger : MonoBehaviour
     public void ReadData()
     {
         //调用背包数据位置初始化
-        Dictionary<Transform, int> placeData = PlayerData.Instence.bagData;
-        ClearItem();
+        Dictionary<Transform, int> placeData = PlayerData.Instence.bagData;      
         CreateItem(placeData);//初始化背包数据
     }
 
@@ -222,7 +221,7 @@ public class UIMansger : MonoBehaviour
 
         Dictionary<Transform, int> placeData = PlayerData.Instence.bagData;
         List<int> itemBagId = new List<int>();//装备数据Id
-        for (int i = 0; i < placeData.Count; i++)//读取背包存储数据
+        for (int i = 0; i < placeData.Count; i++)//读取背包存储数据的攻击力
         {
             foreach (var item in placeData.Keys)
             {
@@ -235,7 +234,7 @@ public class UIMansger : MonoBehaviour
                 }
             }
         }
-        for (int i = 0; i < itemBagId.Count - 1; i++)//降序排序
+        for (int i = 0; i < itemBagId.Count - 1; i++)//按攻击力降序排序
         {
             for (int j = i + 1; j < itemBagId.Count; j++)
             {
@@ -264,15 +263,15 @@ public class UIMansger : MonoBehaviour
         #endregion 生成排列后的物品
     }
 
-    //当背包打开时,物品掉落保存数据
-    public void PresentSaveData(bool _Sort, int ItemId)
+    //当背包打开时,物品掉落实例化UI并保持背包数据
+    public void PresentSaveData(bool _present, int ItemId)
     {
-        bool Sort = _Sort;
-        if (Sort && bagWindow.activeSelf)
+        bool present = _present;
+        if (present)
         {
-            CreateItem(ItemId);
+            CreateItem(ItemId);//创建单个UI在背包
+            SaveData();//保存数据
         }
-        Sort = false;
     }
 
     #endregion 物品的读取/保存/整理

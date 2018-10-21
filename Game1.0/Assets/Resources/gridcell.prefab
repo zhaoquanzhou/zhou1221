@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4514730399142198}
   - component: {fileID: 114659673928340076}
+  - component: {fileID: 65760012452220728}
   m_Layer: 5
   m_Name: gridcell
   m_TagString: Untagged
@@ -40,6 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65760012452220728
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1222872776422772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114659673928340076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,7 +86,7 @@ MonoBehaviour:
   mWidth: 100
   mHeight: 100
   mDepth: 4
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1

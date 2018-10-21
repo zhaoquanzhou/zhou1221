@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2003931976}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1066,6 +1066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 791379257}
   - component: {fileID: 791379258}
+  - component: {fileID: 791379259}
   m_Layer: 5
   m_Name: backpackge
   m_TagString: Untagged
@@ -1122,7 +1123,7 @@ MonoBehaviour:
   mWidth: 500
   mHeight: 500
   mDepth: 2
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
@@ -1139,6 +1140,18 @@ MonoBehaviour:
   mAtlas: {fileID: 11400000, guid: f95e07e3d350bf748b0c42b453a69d2e, type: 2}
   mSpriteName: Dark
   mFillCenter: 1
+--- !u!65 &791379259
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791379256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 500, y: 500, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &809334421 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7,
@@ -1832,6 +1845,7 @@ GameObject:
   - component: {fileID: 1635959547}
   - component: {fileID: 1635959548}
   - component: {fileID: 1635959549}
+  - component: {fileID: 1635959550}
   m_Layer: 5
   m_Name: grid_background
   m_TagString: Untagged
@@ -1886,7 +1900,7 @@ MonoBehaviour:
   mWidth: 400
   mHeight: 400
   mDepth: 1
-  autoResizeBoxCollider: 0
+  autoResizeBoxCollider: 1
   hideIfOffScreen: 0
   keepAspectRatio: 0
   aspectRatio: 1
@@ -1940,6 +1954,18 @@ MonoBehaviour:
   mAtlas: {fileID: 114211850200389870, guid: 0521a6a90872fa84989fc1877dd5f745, type: 2}
   mSpriteName: BackpackUI3
   mFillCenter: 1
+--- !u!65 &1635959550
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1635959546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 400, y: 400, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1727640050 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4361117009826556, guid: 61b06e2ffe429d94cac809f7e361f463,
@@ -2811,6 +2837,7 @@ GameObject:
   - component: {fileID: 2110157880}
   - component: {fileID: 2110157879}
   - component: {fileID: 2110157883}
+  - component: {fileID: 2110157884}
   m_Layer: 5
   m_Name: UI Root
   m_TagString: Untagged
@@ -2929,3 +2956,14 @@ MonoBehaviour:
   bagWindow: {fileID: 260317962}
   gridParent: {fileID: 1876119325}
   gridCound: 9
+--- !u!114 &2110157884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110157878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f58673abf18fa334bbffe3a5b682f103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

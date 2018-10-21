@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4645715529722928}
   - component: {fileID: 114548792019648660}
+  - component: {fileID: 114323381071331516}
   m_Layer: 5
   m_Name: ItemPrefab
   m_TagString: item
@@ -40,6 +41,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114323381071331516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134016602235446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f0f77ce83affe41aef8f188d4d886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restriction: 0
+  cloneOnDrag: 0
+  pressAndHoldDelay: 1
+  interactable: 1
 --- !u!114 &114548792019648660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,5 +104,5 @@ MonoBehaviour:
   bottomType: 1
   topType: 1
   mAtlas: {fileID: 114211850200389870, guid: 0521a6a90872fa84989fc1877dd5f745, type: 2}
-  mSpriteName: Weapon14
+  mSpriteName: Belt01
   mFillCenter: 1
